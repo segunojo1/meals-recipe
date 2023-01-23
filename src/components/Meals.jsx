@@ -6,7 +6,6 @@ const Meals = () => {
 
   return (
     <section>
-
       {
         meals.map(({idMeal, strMeal, strMealThumb}) => {
           return <div key={idMeal}>
