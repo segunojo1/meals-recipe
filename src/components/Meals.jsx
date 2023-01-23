@@ -8,8 +8,11 @@ const Meals = () => {
     <section>
 
       {
-        meals.map(meal => {
-          return <h1>m</h1>
+        meals.map(({idMeal, strMeal, strMealThumb}) => {
+          return <div key={idMeal}>
+            <img src={strMealThumb} alt={strMeal} />
+            <h1>{strMeal}</h1>
+          </div>
         })
       }
     </section>
