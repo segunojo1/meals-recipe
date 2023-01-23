@@ -2,10 +2,17 @@ import React from 'react'
 import { useGlobalContext } from '../context'
 
 const Meals = () => {
-    const con = useGlobalContext()
-    console.log(con);
+    const {meals} = useGlobalContext();
+
   return (
-    <div>Meals</div>
+    <section>
+
+      {
+        meals.map(meal => {
+          return <h1>m</h1>
+        })
+      }
+    </section>
   )
 }
 
