@@ -5,12 +5,12 @@ const Meals = () => {
     const {meals} = useGlobalContext();
 
   return (
-    <section>
+    <section className='grid-cols-3 grid gap-[2rem]'>
       {
         meals.map(({idMeal, strMeal, strMealThumb}) => {
-          return <div key={idMeal} className="meal">
+          return <div key={idMeal} className="meal w-[350px] border">
             <img src={strMealThumb} alt={strMeal} />
-            <div className='meal-text'>
+            <div className='meal-text p-[2rem]'>
             <h1>{strMeal}</h1>
             </div>
           </div>

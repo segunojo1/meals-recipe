@@ -4,7 +4,7 @@ import Modal from "./components/Modal"
 import Search from "./components/Search"
 function App() {
   return(
-    <div>
+    <div className="w-fit m-auto">
       <Search />
       <Favourites />
       <Meals />
