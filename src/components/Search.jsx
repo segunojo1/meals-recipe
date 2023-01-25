@@ -6,6 +6,7 @@ const Search = () => {
   const { setSearch} = useGlobalContext()
   const handleChange = (e) => {
     setInp(e.target.value)
+    setSearch(inp)
   }
   const handleSubmit = (e) => {
     e.preventDefault();
