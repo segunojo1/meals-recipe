@@ -3,11 +3,23 @@ import { useGlobalContext } from '../context'
 
 const Meals = () => {
     const {meals, loading} = useGlobalContext();
-
+  if(loading) {
+    return(
+      <div>
+        <h1>Loading...</h1>
+      </div>
+    )
+  }
+  if(meals < 1) {
+    return(
+      <div>
+        <h1>Sorry no food was found.</h1>
+      </div>
+    )
+  }
   return (
     <section className='grid-cols-3 grid gap-[2rem]'>
       {
-        loading ? <div>Loading</div> :
         meals.map(({idMeal, strMeal, strMealThumb}) => {
           return <div key={idMeal} className="meal w-[350px] border">
             <img src={strMealThumb} alt={strMeal} />
