@@ -4,11 +4,13 @@ import Modal from "./components/Modal"
 import Search from "./components/Search"
 function App() {
   return(
-    <div className="w-fit m-auto">
+    <div >
       <Search />
+      <div className="w-fit m-auto">
       <Favourites />
       <Meals />
       <Modal />
+      </div>
     </div>
   )
 }
