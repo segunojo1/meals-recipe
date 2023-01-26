@@ -3,10 +3,10 @@ import { useGlobalContext } from '../context'
 
 const Search = () => {
   const [inp, setInp]= useState('');
-  const { setSearch} = useGlobalContext()
+  const { setSearch, getRandom} = useGlobalContext()
   const handleChange = (e) => {
-    setInp(e.target.value)
-    setSearch(inp)
+    setInp()
+    setSearch(e.target.value)
   }
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,7 +20,7 @@ const Search = () => {
       <form action="" className='flex gap-[1rem]' onSubmit={handleSubmit}>
         <input type="text" className='p-[1rem] h-[2.5rem] border rounded-md' placeholder='type your favourite meal' onChange={handleChange}/>
         <button type="submit" className='px-[1rem] bg-[blue] rounded-md text-white'>Submit</button>
-        <button className='px-[1rem] bg-[aqua] rounded-md'>Random Meal</button>
+        <button className='px-[1rem] bg-[aqua] rounded-md' onClick={getRandom}>Random Meal</button>
       </form>
       </div>
     </div>
