@@ -11,8 +11,8 @@ function App() {
       <div className="w-fit m-auto">
       <Favourites />
       <Meals />
-     {showModal && <Modal />}
       </div>
+     {showModal && <Modal />}
     </div>
   )
 }
