@@ -2,7 +2,7 @@ import React from 'react'
 import { useGlobalContext } from '../context'
 
 const Meals = () => {
-    const {meals, loading, setShowModal} = useGlobalContext();
+    const {meals, loading, showw} = useGlobalContext();
   if(loading) {
     return(
       <div>

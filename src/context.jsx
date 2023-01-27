@@ -10,6 +10,9 @@ const ContextProvider = ({children}) => {
     const [meals, setMeals] = useState([]);
     const [loading, setLoading] = useState(false);
     const [showModal, setShowModal] = useState(false)
+    const showw = () => {
+        setShowModal(prev => !prev)
+    }
     const getRandom = () => {
         fetchMeals(randomMealUrl)
         
@@ -34,7 +37,7 @@ const ContextProvider = ({children}) => {
         console.log('fetch data here');
         fetchMeals(`${allMealsUrl}${search}`)
     }, [search])
-    return <AppContext.Provider value={{meals, loading, setSearch, getRandom, showModal, setShowModal}}>
+    return <AppContext.Provider value={{meals, loading, setSearch, getRandom, showModal, setShowModal, showw}}>
         {children}
     </AppContext.Provider>
 }
