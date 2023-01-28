@@ -21,7 +21,7 @@ const Meals = () => {
     <section className='grid-cols-3 grid gap-[2rem]'>
       {
         meals.map(({idMeal, strMeal, strMealThumb}) => {
-          return <div key={idMeal} className="meal w-[350px] border" onClick={showw}>
+          return <div key={idMeal} className="meal w-[350px] border" onClick={()=>showw(idMeal)}>
             <img src={strMealThumb} alt={strMeal} />
             <div className='meal-text p-[2rem]'>
             <h1>{strMeal}</h1>
