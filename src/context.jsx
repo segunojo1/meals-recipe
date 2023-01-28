@@ -9,7 +9,7 @@ const ContextProvider = ({children}) => {
     const [search, setSearch] = useState('')
     const [meals, setMeals] = useState([]);
     const [loading, setLoading] = useState(false);
-    const [showModal, setShowModal] = useState(false)
+    const [showModal, setShowModal] = useState(true)
     const showw = () => {
         setShowModal(prev => !prev)
     }
