@@ -50,11 +50,16 @@ const ContextProvider = ({children}) => {
       const newFavs = {...favourites, meal}
       setFavourites(newFavs)
     }
+
+    const removeFav = (id) => {
+        const newwFavs = favourites.filter((fav) => fav.idMeal !== id)
+        setFavourites(newwFavs)
+    }
     useEffect(()=> {
         console.log('fetch data here');
         fetchMeals(`${allMealsUrl}${search}`)
     }, [search])
-    return <AppContext.Provider value={{meals, loading, setSearch, getRandom, showModal, setShowModal, showw, selectedMeal, addToFav}}>
+    return <AppContext.Provider value={{meals, loading, setSearch, getRandom, showModal, setShowModal, showw, selectedMeal, addToFav, favourites, removeFav}}>
         {children}
     </AppContext.Provider>
 }
