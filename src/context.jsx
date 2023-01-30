@@ -11,7 +11,7 @@ const ContextProvider = ({children}) => {
     const [loading, setLoading] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [selectedMeal, setSelectedMeal] = useState(null);
-    const [favourites, setFavourites] = useState()
+    const [favourites, setFavourites] = useState([])
     
     const getRandom = () => {
         fetchMeals(randomMealUrl)
