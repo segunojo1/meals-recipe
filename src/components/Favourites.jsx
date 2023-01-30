@@ -8,7 +8,7 @@ const Favourites = () => {
       favourites.map((fav) => {
         const {idMeal, strMealThumb} = fav
         return(
-          <div key={idMeal}>
+          <div >
           <img src={strMealThumb} alt="hfj" />
           <p onClick={()=>removeFav(idMeal)}>remove</p>
         </div>

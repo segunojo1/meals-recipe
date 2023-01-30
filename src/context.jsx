@@ -42,11 +42,9 @@ const ContextProvider = ({children}) => {
 
     //favourites
     const addToFav = (id) => {
-      const meal = meals.find((meal) => {
-        meal.idMeal == id
-      })
-      const added = favourites.find((meal) => meal.idMeal == id)
-      if(added) return 
+      const meal = meals.find((meal) => meal.id == id)
+    //   const added = favourites.find((meal) => meal.id == id)
+    //   if(added) return 
       const newFavs = [...favourites, meal]
       setFavourites(newFavs)
     }

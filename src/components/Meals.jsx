@@ -22,11 +22,11 @@ const Meals = () => {
     <section className='grid-cols-3 grid gap-[2rem]'>
       {
         meals.map(({idMeal, strMeal, strMealThumb}) => {
-          return <div key={idMeal} className="meal w-[350px] border" onClick={()=>showw(idMeal)}>
-            <img src={strMealThumb} alt={strMeal} />
+          return <div key={idMeal} className="meal w-[350px] border" >
+            <img src={strMealThumb} alt={strMeal} onClick={()=>showw(idMeal)}/>
             <div className='meal-text p-[2rem]'>
             <h1>{strMeal}</h1>
-            <div onClick={() => addToFav(idMeal)}>{BiLike}</div>
+            <div onClick={() => addToFav(idMeal)}><BiLike/></div>
             </div>
           </div>
         })
