@@ -32,7 +32,7 @@ const ContextProvider = ({children}) => {
         }
         setLoading(false)
     }
-    const showw = (idMeal) => {
+    const showw = (idMeal, favourite) => {
         let meal;
        meal =  meals.find((mel) => mel.idMeal === idMeal)
         setSelectedMeal(meal)
