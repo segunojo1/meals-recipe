@@ -2,14 +2,14 @@ import React from 'react'
 import { useGlobalContext } from '../context'
 
 const Favourites = () => {
-  const {favourites, removeFav} = useGlobalContext()
+  const {favourites, removeFav, showw} = useGlobalContext()
   return (
-    <div className='pt-[7rem] bg-black w-full'>{
+    <div className='pt-[7rem] bg-black w-full flex gap-[1rem]'>{
       favourites.map(({idMeal, strMealThumb}) => {
         return(
-          <div >
-          <img src={strMealThumb} alt="hfj" />
-          <p onClick={()=>removeFav(idMeal)}>remove</p>
+          <div className=''>
+          <img src={strMealThumb} alt="hfj" className='w-[60px] rounded-full' onClick={() => showw(idMeal)}/>
+          <p onClick={()=>removeFav(idMeal)} className="text-white">remove</p>
         </div>
         )
       })

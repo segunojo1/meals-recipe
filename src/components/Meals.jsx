@@ -24,9 +24,9 @@ const Meals = () => {
         meals.map(({idMeal, strMeal, strMealThumb}) => {
           return <div key={idMeal} className="meal w-[350px] border" >
             <img src={strMealThumb} alt={strMeal} onClick={()=>showw(idMeal)}/>
-            <div className='meal-text p-[2rem]'>
+            <div className='meal-text p-[2rem] flex justify-between'>
             <h1>{strMeal}</h1>
-            <div onClick={() => addToFav(idMeal)}><BiLike/></div>
+            <div onClick={() => addToFav(idMeal)} className="cursor-pointer"><BiLike/></div>
             </div>
           </div>
         })
