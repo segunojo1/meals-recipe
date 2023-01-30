@@ -5,8 +5,7 @@ const Favourites = () => {
   const {favourites, removeFav} = useGlobalContext()
   return (
     <div className='pt-[7rem] bg-black w-full'>{
-      favourites.map((fav) => {
-        const {idMeal, strMealThumb} = fav
+      favourites.map(({idMeal, strMealThumb}) => {
         return(
           <div >
           <img src={strMealThumb} alt="hfj" />
