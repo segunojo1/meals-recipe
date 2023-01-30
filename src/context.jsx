@@ -10,7 +10,8 @@ const ContextProvider = ({children}) => {
     const [meals, setMeals] = useState([]);
     const [loading, setLoading] = useState(false);
     const [showModal, setShowModal] = useState(false);
-    const [selectedMeal, setSelectedMeal] = useState(null)
+    const [selectedMeal, setSelectedMeal] = useState(null);
+    const [favourites, setFavourites] = useState()
     
     const getRandom = () => {
         fetchMeals(randomMealUrl)
@@ -32,11 +33,16 @@ const ContextProvider = ({children}) => {
         }
         setLoading(false)
     }
-    const showw = (idMeal, favourite) => {
+    const showw = (idMeal) => {
         let meal;
        meal =  meals.find((mel) => mel.idMeal === idMeal)
         setSelectedMeal(meal)
         setShowModal(true)
+    }
+
+    //favourites
+    const addToFavourites = (id) => {
+      const meal = 
     }
     useEffect(()=> {
         console.log('fetch data here');
