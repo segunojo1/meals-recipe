@@ -1,8 +1,9 @@
 import React from 'react'
 import { useGlobalContext } from '../context'
+import {BiLike} from 'react-icons/bi'
 
 const Meals = () => {
-    const {meals, loading, showw} = useGlobalContext();
+    const {meals, loading, showw, addToFav} = useGlobalContext();
   if(loading) {
     return(
       <div>
@@ -25,6 +26,7 @@ const Meals = () => {
             <img src={strMealThumb} alt={strMeal} />
             <div className='meal-text p-[2rem]'>
             <h1>{strMeal}</h1>
+            <div onClick={() => addToFav(idMeal)}>{BiLike}</div>
             </div>
           </div>
         })

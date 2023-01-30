@@ -41,14 +41,20 @@ const ContextProvider = ({children}) => {
     }
 
     //favourites
-    const addToFavourites = (id) => {
-      const meal = 
+    const addToFav = (id) => {
+      const meal = meals.find((meal) => {
+        meal.idMeal == id
+      })
+      const added = favourites.find((meal) => meal.idMeal == id)
+      if(added) return 
+      const newFavs = {...favourites, meal}
+      setFavourites(newFavs)
     }
     useEffect(()=> {
         console.log('fetch data here');
         fetchMeals(`${allMealsUrl}${search}`)
     }, [search])
-    return <AppContext.Provider value={{meals, loading, setSearch, getRandom, showModal, setShowModal, showw, selectedMeal}}>
+    return <AppContext.Provider value={{meals, loading, setSearch, getRandom, showModal, setShowModal, showw, selectedMeal, addToFav}}>
         {children}
     </AppContext.Provider>
 }
