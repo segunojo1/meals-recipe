@@ -32,6 +32,7 @@ const Meals = () => {
           </div>
         })
       }
+      <i>Built with love by <a href="https://twitter.com/segun0x" className='text-[blue]'>Segun Ojo</a></i>
     </section>
   )
 }
