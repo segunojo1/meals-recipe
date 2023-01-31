@@ -6,9 +6,9 @@ const Meals = () => {
     const {meals, loading, showw, addToFav} = useGlobalContext();
   if(loading) {
     return(
-      <div>
-        <h1>Loading...</h1>
-      </div>
+<div id="preloader">
+        <div id="preloader-inner"></div>
+    </div>
     )
   }
   if(meals < 1) {
@@ -19,7 +19,7 @@ const Meals = () => {
     )
   }
   return (
-    <section className='md:grid-cols-2 lg:grid-cols-3 grid gap-[2rem]'>
+    <section className='md:grid-cols-2 lg:grid-cols-3 grid gap-[2rem] pt-[4rem]'>
       {
         meals.map(({idMeal, strMeal, strMealThumb}) => {
           return <div key={idMeal} className="meal w-[350px] border" >

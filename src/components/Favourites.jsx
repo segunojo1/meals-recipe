@@ -5,6 +5,7 @@ const Favourites = () => {
   const {favourites, removeFav, showw} = useGlobalContext()
   return (
     <div className='pt-[9rem] bg-black w-full grid gap-[1rem] p-[2rem] sm:flex sm:grid-cols-0 grid-cols-4'>{
+     
       favourites.map(({idMeal, strMealThumb}) => {
         return(
           <div className=''>

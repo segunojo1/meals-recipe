@@ -5,13 +5,22 @@ const AppContext = createContext();
 
 const allMealsUrl = `https://www.themealdb.com/api/json/v1/1/search.php?s=`;
 const randomMealUrl = 'https://www.themealdb.com/api/json/v1/1/random.php'
+const getFavs = () => {
+    let favvs = localStorage.getItem('favourites')
+    if(favvs) {
+        favvs =  JSON.parse(localStorage.getItem('favourites'))
+    }else{
+        favvs = []
+    }
+    return favvs
+}
 const ContextProvider = ({children}) => {
     const [search, setSearch] = useState('')
     const [meals, setMeals] = useState([]);
     const [loading, setLoading] = useState(false);
     const [showModal, setShowModal] = useState(false);
     const [selectedMeal, setSelectedMeal] = useState(null);
-    const [favourites, setFavourites] = useState([])
+    const [favourites, setFavourites] = useState(getFavs)
     
     const getRandom = () => {
         fetchMeals(randomMealUrl)
@@ -56,6 +65,8 @@ const ContextProvider = ({children}) => {
         setFavourites(newwFavs)
         localStorage.setItem("favourites", JSON.stringify(newwFavs))
     }
+
+   
     useEffect(()=> {
         console.log('fetch data here');
         fetchMeals(`${allMealsUrl}${search}`)

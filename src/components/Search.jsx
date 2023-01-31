@@ -15,7 +15,7 @@ const Search = () => {
     }
   }
   return (
-    <div className='w-full bg-[red] p-[1rem] min-h-[5rem]  fixed '>
+    <div className='w-full bg-white p-[1rem] min-h-[5rem]  fixed '>
       <div className='flex items-center min-h-[5rem] md:ml-[4rem] justify-center'>
       <form action="" className='md:flex grid gap-[1rem] ' onSubmit={handleSubmit}>
       <div className='flex gap-[1rem]'>
