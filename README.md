@@ -2,6 +2,7 @@
 Meal Zone is a simple meals recipe app that gets meals from api an gives you the recipe/procedure to get it prepared
 
 ## Welcome! 👋
+![Screenshot (98)](https://user-images.githubusercontent.com/75251546/215791188-32b5c0b7-14ce-49ab-a262-3be845c14a95.png)
 
 ## Table of contents
 
