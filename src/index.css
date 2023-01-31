@@ -4,10 +4,8 @@
 
 #preloader {
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+   bottom: 0;
+   top: 0;
     background-color: #fff;
     z-index: 99999; }
   
@@ -20,10 +18,10 @@
     height: 2em;
     margin: -25px 0 0 -25px;
     text-indent: -9999em;
-    border-top: 1.5em solid #03449d;
-    border-right: 1.5em solid rgba(245, 245, 245, 0.5);
-    border-bottom: 1.5em solid rgba(245, 245, 245, 0.5);
-    border-left: 1.5em solid rgba(245, 245, 245, 0.5);
+    border-top: 1em solid #03449d;
+    border-right: 1em solid rgba(245, 245, 245, 0.5);
+    border-bottom: 1em solid rgba(245, 245, 245, 0.5);
+    border-left: 1em solid rgba(245, 245, 245, 0.5);
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
@@ -33,8 +31,8 @@
   #preloader-inner,
   #preloader-inner:after {
     border-radius: 50%;
-    width: 10em;
-    height: 10em; }
+    width: 7em;
+    height: 7em; }
   
   @-webkit-keyframes load8 {
     0% {
