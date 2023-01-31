@@ -55,3 +55,10 @@
       .meal{
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
       }
+      .meal {
+        /* the other rules */
+        transition: height 0.3s, box-shadow 0.3s;
+      }
+      .meal:hover {
+        box-shadow: 20px 20px 40px 0px rgba(0,0,0,0.5);
+      }
