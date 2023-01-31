@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react"
+import { AiOutlineLike } from "react-icons/ai";
 import axios from "axios";
 
 const AppContext = createContext();
@@ -21,6 +22,7 @@ const ContextProvider = ({children}) => {
     const [showModal, setShowModal] = useState(false);
     const [selectedMeal, setSelectedMeal] = useState(null);
     const [favourites, setFavourites] = useState(getFavs)
+    const [like, setLike] = useState(false)
     
     const getRandom = () => {
         fetchMeals(randomMealUrl)
@@ -53,12 +55,21 @@ const ContextProvider = ({children}) => {
     const addToFav = (id) => {
       const meal = meals.find((meal) => meal.idMeal === id)
       const added = favourites.find((meal) => meal.idMeal == id)
-      if(added) return 
+      if(added) {
+        removeFav(id)
+        return
+      } 
       const newFavs = [...favourites, meal]
       setFavourites(newFavs)
-      console.log(favourites);
       localStorage.setItem("favourites", JSON.stringify(newFavs))
     }
+    // const likeMeal = (e) => {
+    //     if(!like) {
+    //         e.currentTarget.style.color = 'red'
+    //     }else{
+    //         e.currentTarget.style.color = 'black' 
+    //     }
+    // }
 
     const removeFav = (id) => {
         const newwFavs = favourites.filter((fav) => fav.idMeal !== id)
@@ -71,7 +82,7 @@ const ContextProvider = ({children}) => {
         console.log('fetch data here');
         fetchMeals(`${allMealsUrl}${search}`)
     }, [search])
-    return <AppContext.Provider value={{meals, loading, setSearch, getRandom, showModal, setShowModal, showw, selectedMeal, addToFav, favourites, removeFav}}>
+    return <AppContext.Provider value={{meals, loading, setSearch, getRandom, showModal, setShowModal, showw, selectedMeal, addToFav, favourites, removeFav, like}}>
         {children}
     </AppContext.Provider>
 }

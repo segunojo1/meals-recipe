@@ -9,7 +9,7 @@ const Favourites = () => {
       favourites.map(({idMeal, strMealThumb}) => {
         return(
           <div className=''>
-          <img src={strMealThumb} alt="hfj" className='w-[60px] rounded-full' onClick={() => showw(idMeal)}/>
+          <img src={strMealThumb} alt="hfj" className='w-[60px] rounded-full border-white-500 border-4' onClick={() => showw(idMeal)}/>
           <p onClick={()=>removeFav(idMeal)} className="text-white cursor-pointer">remove</p>
         </div>
         )
