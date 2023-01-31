@@ -15,12 +15,14 @@ const Search = () => {
     }
   }
   return (
-    <div className='w-full bg-[red] h-[5rem]  fixed '>
-      <div className='flex items-center h-[5rem] ml-[4rem]'>
-      <form action="" className='flex gap-[1rem]' onSubmit={handleSubmit}>
+    <div className='w-full bg-[red] p-[1rem] min-h-[5rem]  fixed '>
+      <div className='flex items-center min-h-[5rem] md:ml-[4rem] justify-center'>
+      <form action="" className='md:flex grid gap-[1rem] ' onSubmit={handleSubmit}>
+      <div className='flex gap-[1rem]'>
         <input type="text" className='p-[1rem] h-[2.5rem] border rounded-md' placeholder='type your favourite meal' onChange={handleChange}/>
-        <button type="submit" className='px-[1rem] bg-[blue] rounded-md text-white'>Submit</button>
-        <button className='px-[1rem] bg-[aqua] rounded-md' onClick={getRandom}>Random Meal</button>
+        <button type="submit" className='px-[1rem] bg-[#03449d] rounded-md text-white'>Submit</button>
+      </div>
+        <button className='px-[1rem] h-[2.5rem] bg-[#b4d3fe] rounded-md' onClick={getRandom}>Random Meal</button>
       </form>
       </div>
     </div>

@@ -19,7 +19,7 @@ const Meals = () => {
     )
   }
   return (
-    <section className='grid-cols-3 grid gap-[2rem]'>
+    <section className='md:grid-cols-2 lg:grid-cols-3 grid gap-[2rem]'>
       {
         meals.map(({idMeal, strMeal, strMealThumb}) => {
           return <div key={idMeal} className="meal w-[350px] border" >
