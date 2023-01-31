@@ -8,7 +8,7 @@ const Modal = () => {
   }
   const {idMeal, strMeal,strMealThumb, strInstructions, strSource} = selectedMeal
   return (
-    <div className='w-full h-[100vh] bg-[grey] fixed top-0 flex'>
+    <div className='w-full h-[100vh] backdrop-blur-md fixed top-0 flex'>
       <div className='w-[70%] h-[80%] bg-[white] m-auto rounded-lg overflow-scroll ' >
         <img src={strMealThumb} alt="" className='w-full h-[15rem] object-cover'/>
         <div className='p-[2rem] gap-[1rem] grid'>
