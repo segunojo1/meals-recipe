@@ -31,7 +31,6 @@ Meal Zone is a simple meals recipe app that gets meals from api an gives you the
 ```js
 import {useContext} from 'react'
 import {useEffect} from 'react'
-import {useState} from 'react'
 
 localStorage.setItem("favourites", JSON.stringify(newFavs))
 
