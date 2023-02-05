@@ -62,13 +62,6 @@ const ContextProvider = ({children}) => {
       setFavourites(newFavs)
       localStorage.setItem("favourites", JSON.stringify(newFavs))
     }
-    // const likeMeal = (e) => {
-    //     if(!like) {
-    //         e.currentTarget.style.color = 'red'
-    //     }else{
-    //         e.currentTarget.style.color = 'black' 
-    //     }
-    // }
 
     const removeFav = (id) => {
         const newwFavs = favourites.filter((fav) => fav.idMeal !== id)
