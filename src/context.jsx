@@ -22,7 +22,6 @@ const ContextProvider = ({children}) => {
     const [showModal, setShowModal] = useState(false);
     const [selectedMeal, setSelectedMeal] = useState(null);
     const [favourites, setFavourites] = useState(getFavs)
-    const [like, setLike] = useState(false)
     
     const getRandom = () => {
         fetchMeals(randomMealUrl)
@@ -82,7 +81,7 @@ const ContextProvider = ({children}) => {
         console.log('fetch data here');
         fetchMeals(`${allMealsUrl}${search}`)
     }, [search])
-    return <AppContext.Provider value={{meals, loading, setSearch, getRandom, showModal, setShowModal, showw, selectedMeal, addToFav, favourites, removeFav, like}}>
+    return <AppContext.Provider value={{meals, loading, setSearch, getRandom, showModal, setShowModal, showw, selectedMeal, addToFav, favourites, removeFav}}>
         {children}
     </AppContext.Provider>
 }
